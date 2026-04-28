@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+  # Security aur Server ko confuse hone se bachane ke liye
+  Options -Indexes -MultiViews
+  RewriteEngine On
+
+  # 1. Force HTTPS (Security ke liye)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Force Non-WWW (SEO ke liye)
+  RewriteCond %{HTTP_HOST} ^www\.magnecron\.com$ [NC]
+  RewriteRule ^(.*)$ https://magnecron.com/$1 [L,R=301]
+
+  # 3. Remove Trailing Slash (Agar koi URL ke last mein / lagaye toh use hata dega)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+  # 4. Handle Next.js Static Export (Bina .html extension ke files load karna)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*?)/?$ $1.html [L]
+
+  # 5. 404 Error Page (Next.js ka generate kiya hua 404 page dikhayega)
+  ErrorDocument 404 /404.html
+</IfModule>
