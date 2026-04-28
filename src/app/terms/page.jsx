@@ -13,7 +13,7 @@ const TermsAndConditionsPage = () => {
               Terms & Conditions
             </h2>
           </div>
-        </div>
+        </div> 
       </div>
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 py-8 md:py-10">
