@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, 
+    unoptimized: true,  
   },
   // Agar trailing slashes chahiye toh ise true kar sakte ho
   trailingSlash: false,
