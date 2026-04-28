@@ -1,14 +1,14 @@
+export const dynamic = "force-static";
+
 export default function sitemap() {
-  // Tumhari live website ka base URL
   const baseUrl = "https://magnecron.com";
 
-  // Tumhare saare static routes
   const staticRoutes = [
     {
       url: `${baseUrl}`,
       lastModified: new Date().toISOString().split('T')[0],
       changeFrequency: "weekly",
-      priority: 1.0, // Homepage ki priority sabse high hoti hai
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/firm`,
