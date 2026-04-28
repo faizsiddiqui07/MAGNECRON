@@ -1,5 +1,5 @@
+import { base_url } from "@/config/config";
 import axios from "axios";
-import { base_url } from "../../../../config/config";
 
 // 1. Next.js ko batana ki kaun-kaun se articles ki HTML banani hai
 export async function generateStaticParams() {
