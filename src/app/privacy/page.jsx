@@ -1,6 +1,11 @@
-export const metadata = {
-  title: "Privacy Policy | MAGNECRON",
-};
+import { pageMetadata } from "../../config/site";
+
+export const metadata = pageMetadata({
+  title: "Privacy Policy",
+  description:
+    "How MAGNECRON collects, uses, and protects the personal information shared with us across our website and investment services.",
+  path: "/privacy",
+});
 
 const PrivacyPolicyPage = () => {
   return (
@@ -9,9 +14,9 @@ const PrivacyPolicyPage = () => {
       <div className="w-full h-[15vh] md:h-[20vh] relative border-b border-[#fcfcfc]">
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 w-full">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-[#fcfcfc]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-[#fcfcfc]">
               Privacy Policy
-            </h2>
+            </h1>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ const Header = () => {
               <img
                 src={logo.src}
                 className="w-48 sm:w-67.5 object-contain"
-                alt="Magnecron Logo"
+                alt="MAGNECRON"
               />
             </Link>
 

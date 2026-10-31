@@ -1,57 +1,20 @@
-"use client";
-
 import { ArrowLeft } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { base_url } from "../../../config/config";
-import axios from "axios";
+import { getBlogBySlug } from "@/lib/blog";
 
-const BlogDetailPage = () => {
-  const { articleId } = useParams(); // Next.js next/navigation se useParams()
-
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchBlogDetails = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.post(`${base_url}/api/blogDetails`, {
-          blogSlug: articleId,
-        });
-
-        if (response.data.success) {
-          setBlog(response.data.data);
-        }
-      } catch (error) {
-        console.error("Error fetching blog details:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (articleId) {
-      fetchBlogDetails();
-    }
-  }, [articleId]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <h2 className="text-[#C7B390] text-2xl uppercase tracking-widest font-bold animate-pulse">
-          Loading Article...
-        </h2>
-      </div>
-    );
-  }
+// Server component — article ka poora content build time par HTML mein
+// aa jaata hai, taaki crawlers ko khali page na mile
+const BlogDetailPage = async ({ params }) => {
+  const { articleId } = await params;
+  const blog = await getBlogBySlug(articleId);
 
   if (!blog) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-[#fcfcfc]">
-        <h2 className="text-3xl font-bold uppercase mb-4 text-[#C7B390]">
+        <h1 className="text-3xl font-bold uppercase mb-4 text-[#C7B390]">
           Article Not Found
-        </h2>
+        </h1>
         <p className="text-gray-400 mb-8">
           The insight you are looking for does not exist.
         </p>
@@ -111,7 +74,7 @@ const BlogDetailPage = () => {
           {blog?.subTitle}
         </div>
 
-        <div 
+        <div
           className="text-lg prose prose-invert prose-lg max-w-none prose-headings:uppercase prose-headings:tracking-wide prose-a:text-[#C7B390] prose-img:rounded-md"
           dangerouslySetInnerHTML={{ __html: blog?.content }}
         />

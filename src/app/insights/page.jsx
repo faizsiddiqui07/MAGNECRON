@@ -1,24 +1,11 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
-import { useSelector } from "react-redux";
 import Link from "next/link";
-// useBlogData hook call kar lena agar yahan directly fetch kar rahe ho
-import useBlogData from "../../hooks/useBlogData";
+import { getAllBlogs } from "@/lib/blog";
 
-const InsightsPage = () => {
-  const isLoading = useBlogData();
-  const { blogData } = useSelector((state) => state.blog);
-
-  if (isLoading) {
-    return (
-      <div className="w-full min-h-screen flex items-center justify-center">
-        <h2 className="text-[#C7B390] text-2xl uppercase tracking-widest font-bold animate-pulse">
-          Loading Insights...
-        </h2>
-      </div>
-    );
-  }
+// Server component — articles build time par render hote hain taaki
+// Google ko HTML mein hi content mile (pehle sab client-side fetch tha)
+const InsightsPage = async () => {
+  const blogData = await getAllBlogs();
 
   return (
     <div className="animate-fade-in w-full grow">
@@ -30,9 +17,9 @@ const InsightsPage = () => {
         />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 w-full">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-[#fcfcfc]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-[#fcfcfc]">
               Insights
-            </h2>
+            </h1>
           </div>
         </div>
       </div>
@@ -44,7 +31,7 @@ const InsightsPage = () => {
         ) : (
           blogData.map((article, index) => (
             <Link
-              href={`/insight/${article.slug}`} 
+              href={`/insights/${article.slug}`}
               key={article._id || index}
               className="group cursor-pointer border border-neutral-800 hover:border-[#C7B390] p-6 transition-colors bg-neutral-900 flex flex-col"
             >
@@ -58,9 +45,9 @@ const InsightsPage = () => {
                   className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <h4 className="text-2xl font-bold uppercase mb-4 text-[#fcfcfc] group-hover:text-[#C7B390] transition-colors grow">
+              <h2 className="text-2xl font-bold uppercase mb-4 text-[#fcfcfc] group-hover:text-[#C7B390] transition-colors grow">
                 {article.title}
-              </h4>
+              </h2>
               <p className="text-gray-400 text-lg mb-6">{article.subTitle}</p>
               <span className="inline-flex items-center uppercase tracking-widest text-sm font-bold text-[#C7B390] group-hover:text-[#fcfcfc] transition-colors">
                 Read Article{" "}

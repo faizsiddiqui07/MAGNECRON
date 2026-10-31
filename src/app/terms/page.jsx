@@ -1,6 +1,11 @@
-export const metadata = {
-  title: "Terms & Conditions | MAGNECRON",
-};
+import { pageMetadata } from "../../config/site";
+
+export const metadata = pageMetadata({
+  title: "Terms & Conditions",
+  description:
+    "The terms that govern the use of the MAGNECRON website and the information published on it.",
+  path: "/terms",
+});
 
 const TermsAndConditionsPage = () => {
   return (
@@ -9,9 +14,9 @@ const TermsAndConditionsPage = () => {
       <div className="w-full h-[15vh] md:h-[20vh] relative border-b border-[#fcfcfc]">
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 w-full">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-[#fcfcfc]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-[#fcfcfc]">
               Terms & Conditions
-            </h2>
+            </h1>
           </div>
         </div> 
       </div>

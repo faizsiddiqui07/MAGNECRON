@@ -3,7 +3,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link"; 
 
 export const metadata = {
-  title: "404 - Not Found | MAGNECRON",
+  title: "404 – Page Not Found",
+  robots: { index: false, follow: true },
 };
 
 const NotFoundPage = () => {

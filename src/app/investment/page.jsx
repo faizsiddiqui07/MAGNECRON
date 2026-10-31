@@ -44,9 +44,9 @@ const InvestmentPage = () => {
 
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 w-full">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-[#fcfcfc]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-[#fcfcfc]">
               Investments
-            </h2>
+            </h1>
           </div>
         </div>
       </div>

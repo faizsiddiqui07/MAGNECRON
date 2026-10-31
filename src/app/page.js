@@ -65,9 +65,9 @@ const Homepage = () => {
         {/* Content Container */}
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 w-full z-10 py-20 flex flex-col lg:flex-row items-center gap-12 relative">
           <div className="w-full lg:w-3/5 relative z-20">
-            <h2 className="text-5xl lg:text-7xl xl:text-8xl text-center lg:text-start font-bold leading-tight mb-6 uppercase tracking-tight">
+            <h1 className="text-5xl lg:text-7xl xl:text-8xl text-center lg:text-start font-bold leading-tight mb-6 uppercase tracking-tight">
               Managing <br /> The Future <br /> Of Capital
-            </h2>
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 w-full lg:max-w-2xl text-center lg:text-start mb-12 border-l-4 border-[#fcfcfc] pl-6">
               We mitigate risk and drive value for the world's leading
               companies, institutions, and investors through disciplined

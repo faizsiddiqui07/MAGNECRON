@@ -3,14 +3,14 @@ import Link from "next/link";
 import CapitalImage from "../../assets/CapitalImage.webp";
 import PortfolioImage from "../../assets/PortfolioImage.webp";
 import VentureImage from "../../assets/VentureImage.webp";
+import { pageMetadata } from "../../config/site";
 
-export const metadata = {
-  title: "Business Domains – Core Investment Pillars of Magnecron | MAGNECRON",
-  description: "Magnecron's investment framework is built on three core pillars - Capital, Portfolio, Venture",
-  alternates: {
-    canonical: "https://magnecron.com/business",
-  },
-};
+export const metadata = pageMetadata({
+  title: "Business Domains – Core Investment Pillars of Magnecron",
+  description:
+    "Magnecron's investment framework is built on three core pillars - Capital, Portfolio, Venture",
+  path: "/business",
+});
 
 const BusinessDomainPage = () => {
   const domains = [
@@ -44,9 +44,9 @@ const BusinessDomainPage = () => {
     <div className="animate-fade-in w-full grow">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-30 py-16 md:pt-24 md:pb-16">
         <div className="mb-16 text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mb-6 text-[#fcfcfc]">
+          <h1 className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mb-6 text-[#fcfcfc]">
             Business Domain
-          </h2>
+          </h1>
           <p className="text-xl text-gray-400">
             Magnecron's investment framework is built on three core pillars.
             Each domain is highly specialized yet deeply integrated into our
