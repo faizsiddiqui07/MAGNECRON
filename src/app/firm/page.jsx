@@ -20,7 +20,7 @@ const TheFirmPage = () => {
   };
 
   const tabs = [
-    { id: "about", label: "About Magnecron" },
+    { id: "about", label: "About MAGNECRON" },
     { id: "philosophy", label: "Our Philosophy" },
     { id: "leadership", label: "Leadership" },
     { id: "governance", label: "Governance" },
@@ -71,7 +71,7 @@ const TheFirmPage = () => {
             {activeTab === "about" && (
               <div className="animate-fade-in space-y-6 text-lg text-gray-300">
                 <h3 className="text-3xl font-bold uppercase border-b border-neutral-800 pb-4 mb-8 text-[#fcfcfc]">
-                  About Magnecron
+                  About MAGNECRON
                 </h3>
                 <p className="leading-relaxed">
                   MAGNECRON operates as an investment platform and holding

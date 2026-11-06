@@ -19,7 +19,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-gray-400 max-w-md mt-6 leading-relaxed">
-              Magnecron is not just an investment firm - it is a strategic
+              MAGNECRON is not just an investment firm - it is a strategic
               wealth-building institution.
             </p>
           </div>
@@ -130,7 +130,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-neutral-800 pt-8 flex justify-center items-center gap-4">
           <p className="text-gray-500 text-sm text-center">
-            &copy; {new Date().getFullYear()} Magnecron. All rights reserved.
+            &copy; {new Date().getFullYear()} MAGNECRON. All rights reserved.
           </p>
         </div>
       </div>

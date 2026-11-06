@@ -33,7 +33,7 @@ const Preloader = ({ onLoadingComplete }) => {
         {/* Cinematic Logo Animation */}
         <motion.img
           src={logo.src}
-          alt="Magnecron Logo"
+          alt="MAGNECRON"
           className="w-64 sm:w-80 md:w-112.5 lg:w-137.5 object-contain mb-8 md:mb-12"
           initial={{ scale: 1.1, opacity: 0, filter: "blur(10px)" }} 
           animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }} 

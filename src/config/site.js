@@ -3,7 +3,7 @@ export const SITE_NAME = "MAGNECRON";
 export const SITE_URL = "https://magnecron.com";
 export const SITE_TAGLINE = "Strategic Asset & Investment Management";
 export const SITE_DESCRIPTION =
-  "Magnecron is a forward-thinking asset and investment platform focused on capital deployment, portfolio stewardship, and venture building across diversified sectors.";
+  "MAGNECRON is a forward-thinking asset and investment platform focused on capital deployment, portfolio stewardship, and venture building across diversified sectors.";
 
 // WhatsApp / LinkedIn / X link preview ke liye share image (1200x630)
 export const OG_IMAGE = {

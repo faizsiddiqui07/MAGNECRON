@@ -56,7 +56,7 @@ const Homepage = () => {
         <div className="absolute inset-0 lg:hidden z-0">
           <img
             src={bannerImage.src}
-            alt="Magnecron Background Mobile"
+            alt="MAGNECRON"
             className="w-full h-full object-cover grayscale opacity-30 object-center"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[#060606] via-[#060606]/80 to-transparent"></div>
@@ -78,7 +78,7 @@ const Homepage = () => {
                 href={"/firm"}
                 className="group flex items-center space-x-4 bg-[#C7B390] text-[#060606] px-4 sm:px-8 py-4 font-bold tracking-widest uppercase hover:bg-[#fcfcfc] transition-colors"
               >
-                <span>Discover Magnecron</span>
+                <span>Discover MAGNECRON</span>
                 <ArrowRight className="transform group-hover:translate-x-2 transition-transform" />
               </Link>
             </div>
@@ -88,7 +88,7 @@ const Homepage = () => {
             <div className="absolute inset-0 bg-[#fcfcfc] transform translate-x-4 translate-y-4"></div>
             <img
               src={bannerImage.src}
-              alt="Magnecron Banner"
+              alt="MAGNECRON"
               className="relative z-10 w-full h-125 object-cover grayscale contrast-125 border border-[#fcfcfc]"
             />
           </div>
@@ -120,7 +120,7 @@ const Homepage = () => {
                 INTELLIGENT MANAGEMENT
               </h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Magnecron actively structures, optimizes, and protects your
+                MAGNECRON actively structures, optimizes, and protects your
                 capital.
               </p>
             </div>

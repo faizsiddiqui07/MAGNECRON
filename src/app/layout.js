@@ -26,9 +26,8 @@ export const metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   keywords: [
-    "Magnecron",
     "MAGNECRON",
-    "Magnecron Private Limited",
+    "MAGNECRON PRIVATE LIMITED",
     "asset management",
     "investment platform",
     "capital deployment",
